@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #BFD7EA; /* Azul Claro */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0A192F; /* Azul Escuro */
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+/* Todo container */
+#main-container {
+    background: linear-gradient(135deg, #0A192F 0%, #1F4287 100%);
+    position: relative;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    margin-top: 5vh;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* add container */
+#add-container {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+#add-container input,
+#add-container button {
+    padding: 10px;
+    background-color: #1F4287;
+    border: none;
+    width: 80%;
+    display: inline-block;
+}
+
+#add-container button {
+    width: 18%;
+    cursor: pointer;
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+#add-container button:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+
+#add-container button i {
+    color: #FFFFFF;
+}
+
+#add-container button:hover > i {
+    color: #0DD657;
+    transform: scale(1.2);
+}
+
+/* tasks container */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    position: relative;
+    background-color: #1F4287; /* Azul Médio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.task-title {
+    flex-grow: 1;
+    margin: 0;
+    text-align: left;
+}
+
+.task:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hide {
+    display: none;
+}
+
+.task:hover .fa-trash {
+    display: block;
+}
+
+.fa.fa-check {
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #444;
+    padding: 7px;
+}
+
+.fa.fa-check.done {
+    color: #0DD657;
+    border: 1px solid #0DD657; 
+}
+
+/* Adicionando estados de hover para .done e não .done */
+.fa.fa-check:not(.done):hover {
+    color: #0DD657;
+    border-color: #0DD657;
+}
+
+.fa.fa-check.done:hover {
+    color: #FF7066;
+    border-color: #FF7066;
+}
+
+.fa.fa-trash {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#empty-tasks {
+    text-align: center;
+}
+
+/* mobile */
+@media(max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #main-container {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .task {
+        align-items: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .task-title { 
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: hidden; 
+    }
+
+    .fa.fa-trash {
+        display: block;
+    }
+}
+
+
+

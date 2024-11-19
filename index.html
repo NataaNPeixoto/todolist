@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>To Do App - Natan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=".//css/styles.css">
+    <script src=".//js/scripts.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="add-container">
+            <h2>Adicione suas tarefas:</h2>
+            <form action="">
+                <input 
+                    type="text" 
+                    name="task" 
+                    id="task" 
+                    placeholder="O que você tem para fazer?"
+                >
+                <button type="submit" id="add"><i class="fa fa-plus"></i></button>
+            </form>
+        </div>
+        <div id="tasks-container">
+            <h2>Veja suas tarefas:</h2>
+            <!-- Template -->
+            <div class="task hide">
+                <i class="fa fa-check"></i>
+                <span class="task-title">Título da tarefa</span>
+                <i class="fa fa-trash"></i>
+            </div>
+            <!-- Fim template -->
+            <p id="empty-tasks">Não há tarefas cadastradas</p>
+        </div>
+    </div>
+</body>
+</html>

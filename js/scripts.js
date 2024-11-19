@@ -1,4 +1,5 @@
 class Todo {
+
     constructor() {
         this.totalTasks = document.querySelectorAll('.task').length;
         this.loadTasks();  // Carregar tarefas salvas na localStorage ao iniciar
@@ -9,6 +10,8 @@ class Todo {
         let template = document.querySelector('.task').cloneNode(true);
         // Remover a classe hide
         template.classList.remove('hide');
+        // Remover a classe done caso tenha sido adicionada por engano
+        template.querySelector('.fa-check').classList.remove('done');
         // Manipular o texto
         let templateText = template.querySelector('.task-title');
         templateText.textContent = taskText;

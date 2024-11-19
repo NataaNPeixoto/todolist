@@ -127,6 +127,10 @@ h2 {
     cursor: pointer;
 }
 
+.fa.fa-trash:hover {
+    color: #FF7066;
+}
+
 #empty-tasks {
     text-align: center;
 }

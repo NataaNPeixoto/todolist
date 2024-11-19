@@ -77,8 +77,25 @@ h2 {
     background-color: #1F4287; /* Azul Médio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+/* CSS para animações de entrada e saída */
+.task.adding {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.task.adding.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.task.removing {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
 
 .task-title {
     flex-grow: 1;
